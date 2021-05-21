@@ -13,6 +13,9 @@ class Category extends Model
     protected $dates = ['deleted_at'];
     //id era convertido como int, então forçar a conversão para string
     protected $casts = [
-        'id' => 'string'
+        'id' => 'string',
+        'is_active' => 'boolean'
     ];
+    protected $keyType = 'string';
+    public $incrementing = false;
 }
